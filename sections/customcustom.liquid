@@ -1,0 +1,39 @@
+{% schema %}
+{
+  "name": "Custom Heading + Link",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to My Section"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Link Text",
+      "default": "Visit Site"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CustomCustom Section"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="customcustom-section">
+  <h2>{{ section.settings.heading }}</h2>
+  {% if section.settings.link_url %}
+    <p><a href="{{ section.settings.link_url }}" target="_blank" rel="noopener noreferrer">
+      {{ section.settings.subtext }}
+    </a></p>
+  {% endif %}
+</div>
