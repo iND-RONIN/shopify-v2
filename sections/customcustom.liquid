@@ -1,11 +1,30 @@
 {% schema %}
 {
-  "name": "CustomCustom Section",
-  "settings": [],
+  "name": "Custom Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "url",
+      "id": "custom_link",
+      "label": "Link URL"
+    }
+  ],
   "presets": [
     {
-      "name": "CustomCustom Section"
+      "name": "Custom Section"
     }
   ]
 }
 {% endschema %}
+
+<div class="custom-section" style="padding: 40px; text-align: center;">
+  <h2>{{ section.settings.main_heading }}</h2>
+  {% if section.settings.custom_link != blank %}
+    <p><a href="{{ section.settings.custom_link }}" target="_blank">Click here</a></p>
+  {% endif %}
+</div>

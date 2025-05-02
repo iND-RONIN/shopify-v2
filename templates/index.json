@@ -66,23 +66,18 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "customcustom": {
+      "type": "customcustom",
+      "settings": {
+        "main_heading": "Check out this link",
+        "custom_link": "https://example.com"
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
-  ]
-}
-
-
-
-{
-  "sections": {
-    "customcustom": {
-      "type": "customcustom"
-    }
-  },
-  "order": [
+    "featured_collection",
     "customcustom"
   ]
 }
