@@ -1,30 +1,57 @@
+<!-- sections/customcustom.liquid -->
+<div class="custom-section page-width">
+  <div class="custom-section__content">
+    <h2 class="h1">{{ section.settings.main_heading }}</h2>
+    {% if section.settings.custom_link != blank %}
+      <a href="{{ section.settings.custom_link }}" class="button button--primary">
+        {{ section.settings.custom_link }}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .custom-section {
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .custom-section__content {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .custom-section h2 {
+    margin-bottom: 2rem;
+  }
+
+  .custom-section .button {
+    margin-top: 2rem;
+  }
+</style>
+
 {% schema %}
 {
-  "name": "Custom Section",
+  "name": "Custom Custom",
   "settings": [
     {
       "type": "text",
       "id": "main_heading",
-      "label": "Main Heading",
-      "default": "Welcome to our store"
+      "label": "Heading",
+      "default": "Check out this link"
     },
     {
       "type": "url",
       "id": "custom_link",
-      "label": "Link URL"
+      "label": "Custom URL"
     }
   ],
   "presets": [
     {
-      "name": "Custom Section"
+      "name": "Custom Custom",
+      "category": "Custom"
     }
   ]
 }
 {% endschema %}
-
-<div class="custom-section" style="padding: 40px; text-align: center;">
-  <h2>{{ section.settings.main_heading }}</h2>
-  {% if section.settings.custom_link != blank %}
-    <p><a href="{{ section.settings.custom_link }}" target="_blank">Click here</a></p>
-  {% endif %}
-</div>
+    
