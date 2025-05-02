@@ -73,3 +73,16 @@
     "featured_collection"
   ]
 }
+
+
+
+{
+  "sections": {
+    "customcustom": {
+      "type": "customcustom"
+    }
+  },
+  "order": [
+    "customcustom"
+  ]
+}
